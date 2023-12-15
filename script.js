@@ -1,59 +1,39 @@
-let Resume={
-    "about": {
-      "name": "R Balasubramaniam",
-      "email": "ui.bala@yahoo.com",
-      "mobile": 8056406804,
-      "degree": "B.E",
-      "location": {
-        "address-line-1": "886-A Gandhi Nagar Second Street",
-        "address-line-2":"KR Palayam Bhavani",
-        "pinCode": 638301,
-        "city": "Erode",
-        "state": "Tamilnadu",
-        "country": "India"
-      }
-      
-    },
+var iteObjs = [{
+    "name" : "X", 
+    "course"   : "B.E Computer Science Engineering",
+    "duration" : "Four Years",
+    "mail": "ui.bala@yahoo.com"
+},
+{
+    "name" : "Y", 
+    "course"   : "B.E Computer Science Engineering",
+    "duration" : "Four Years",
+    "mail": "ui.bala@yahoo.com"
+}];
+//for loop
+for(var i = 0; i < iteObjs.length; i++) {
+    var objIte = iteObjs[i];
 
+    console.log(objIte.name);
+    console.log(objIte.course);
+    console.log(objIte.duration);
+    console.log(objIte.mail);
 
-    "work": [
-      {
-        "company": "Santhila DataBot Private Limited",
-        "position": "UI Developer"
-      }
-    ],
+}
+//for Each
+iteObjs.forEach(function(objIte) { console.log(objIte.duration); });
 
+//for In
+for (var key in iteObjs) {
+if (iteObjs.hasOwnProperty(key)) {
+  console.log(iteObjs[key].course);
 
-    "education": [
-      {
-        "institution": "KSR Institute for Engineering and Technology",
-        "department": "Computer Science and Engineering",
-        "batch": 2015-2019,
-        "gpa": 7
-      }
-    ],
-
-
-    "skills": [
-      {
-        "name": "HTML, CSS, Bootstrap, JavaScript",
-        "level": "Intermediate"
-        
-      }
-    ],
-
-
-    "known-language": [
-      {
-        "language": "Tamil,English"
-      }
-    ],
-
-
-    "interests": [
-      {
-        "name": "Reading Books, Writing Tales"
-      }
-    ]
-  }
-  console.log(Resume);
+ 
+}
+}
+//for Of
+let text = "";
+for (let x of iteObjs[key].name) {
+ text += x; 
+}
+ console.log(text);
